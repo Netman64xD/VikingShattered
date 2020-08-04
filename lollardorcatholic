@@ -1,0 +1,35 @@
+namespace = lollardquestion
+country_event = {
+	id = lollardquestion.1
+	title = "lollardquestion.1.t"
+	desc = "lollardquestion.1.d"
+	picture = POPE_PREACHING_eventPicture
+	trigger = {
+            tag = ENG
+		}
+		NOT = {	has_country_flag = lollard_accepted }
+		NOT = { has_country_flag = lollard_abandoned }
+		}
+	mean_time_to_happen = { 
+		days = 4
+	}
+	immediate = {
+	}
+	option = {
+		name = "lollardquestion.1.a"
+		add_stability = 2
+    {
+			add_country_modifier = {
+				name = "lollard_embraced"
+				duration = 5475
+			}
+		set_country_flag = lollard_accepted
+		}
+	option = {
+		name = "lollardquestion.1.b"
+		add_stability = -1
+    add_prestige = -25
+		change_religion = catholic
+		set_country_flag = lollard_abandoned
+	}
+}
